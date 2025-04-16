@@ -1,4 +1,11 @@
 package wtf.tonho.ProjectIdeaAI.model.enums;
 
-public class TipoTecnologia {
+public enum TipoTecnologia {
+    FRONTEND,
+    BACKEND,
+    DATABASE,
+    MOBILE,
+    DEVOPS,
+    IA,
+    CLOUD
 }
