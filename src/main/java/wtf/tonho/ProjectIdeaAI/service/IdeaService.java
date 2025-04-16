@@ -5,6 +5,7 @@ import wtf.tonho.ProjectIdeaAI.model.Idea;
 import wtf.tonho.ProjectIdeaAI.repository.IdeaRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class IdeaService {
@@ -21,4 +22,20 @@ public class IdeaService {
     public List<Idea> buscarTodas(){
         return ideaRepository.findAll();
     }
+
+   public Optional<Idea> buscarPorId(Long id) {
+        return ideaRepository.findById(id);
+   }
+
+   public Idea alterarPorId(Idea idea) {
+        return ideaRepository.save(idea);
+   }
+
+
+    public void removerPorId(Long id) {
+        ideaRepository.deleteById(id);
+    }
+
+
+
 }
