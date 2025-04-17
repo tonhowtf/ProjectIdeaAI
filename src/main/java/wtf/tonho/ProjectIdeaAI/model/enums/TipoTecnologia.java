@@ -7,5 +7,7 @@ public enum TipoTecnologia {
     MOBILE,
     DEVOPS,
     IA,
-    CLOUD
+    CLOUD,
+    FRAMEWORK,
+    API
 }
