@@ -3,6 +3,7 @@ package wtf.tonho.ProjectIdeaAI.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.web.bind.annotation.RestController;
 import wtf.tonho.ProjectIdeaAI.model.enums.Categoria;
 
 import java.time.LocalDateTime;
@@ -22,7 +23,7 @@ public class Idea {
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
             name = "idea_tecnologia",
             joinColumns = @JoinColumn(name = "idea_id"),
